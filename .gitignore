@@ -3,3 +3,6 @@ __pycache__/
 
 # ignore virtualenv folder
 todoapp/
+
+# ignore db.py 
+db.py
