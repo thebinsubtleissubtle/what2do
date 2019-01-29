@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What2Do? | Edit</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Edit Task</h1>
+			<nav>
+				<a href="/">Back</a>
+			</nav>
+		</div>
+	</header>
+	<section id="showcase">
+		<div class="container">
+			<form action="/edit/{{data.id}}" method="post" onsubmit="return validateForm()">
+				<input type="hidden" name="id" value = "{{data.id}}">
+				<div class="form-group">
+					<label for="taks">Task</label>
+					<input type="text" name="task" id="" value = "{{data.task}}">
+				</div>
+				<div class="form-group">
+					<label for="status">Status</label>	
+					<select name="status" id="status">
+						<option value="">Select One...</option>
+						<option value="0">Not Done</option>
+						<option value="1">Done</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="priority">Priority</label>
+					<select name="priority" id="priority">
+						<option value="">Select One...</option>
+						<option value="Low">Low</option>
+						<option value="Medium">Medium</option>
+						<option value="High">High</option>
+					</select>
+				</div>
+				<input type="submit" value="Submit" class = "button-form">
+			</form>
+		</div>
+	</section>
+	<footer>
+        <p>
+            Copyright &copy; {{year}} RC Pery.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What2Do? | New</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>New Task</h1>
+			<nav>
+				<a href="/">Back</a>
+			</nav>
+		</div>
+	</header>
+	<section id="showcase">
+		<div class="container">
+			<form action="/new" method = "post" onsubmit="return validateForm()">
+				<div class="form-group">
+					<label for="task">Task</label>
+					<input type="text" name="task" required>
+				</div>
+				<div class="form-group">
+					<label for="status">Status</label>
+					<select name="status" id="status" required>
+						<option value="">Select One...</option>
+						<option value="0">Not Done</option>
+						<option value="1">Done</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="priority">Priority</label>
+					<select name="priority" id="priority" required>
+						<option value="">Select One...</option>
+						<option value="Low">Low</option>
+						<option value="Medium">Medium</option>
+						<option value="High">High</option>
+					</select>
+				</div>
+				<input type="submit" value="Submit" class = "button-form">
+			</form>
+		</div>
+	</section>
+	<footer>
+        <p>
+            Copyright &copy; {{year}} RC Pery. <a href="https://github.com/iamrcpery"><img src="img/GitHub-Mark-32px.png" alt="Github logo"></a>
+        </p>
+    </footer>
+    <script src = "js/main.js"></script>
+</body>
+</html>
